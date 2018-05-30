@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.jeon.gnu_main_3_2.MainActivity">
+
+
+    <TextView
+        android:id="@+id/resultName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="검색된 건물 이름"
+        android:textSize="23dp"/>
+
+    <Button
+        android:id="@+id/Homepage"
+        android:onClick="Homepage"
+        android:text="홈페이지"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick"/>
+    <Button
+        android:id="@+id/MapsActivity"
+        android:onClick="MapsActivity"
+        android:text="건물위치"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick" />
+    <Button
+        android:id="@+id/InternalMap"
+        android:onClick="InternalMap"
+        android:text="내부지도"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="OnClick"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:text="건물에 대한 기본 설명"
+        android:textSize="23dp"></TextView>
+
+
+</LinearLayout>

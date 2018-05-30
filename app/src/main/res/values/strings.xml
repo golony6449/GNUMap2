@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">경상대MAP</string>
+    <string name="title_search">검색</string>
+    <string name="title_change">전환</string>
+    <string name="title_button">범위</string>
+    <string name="title_CurrentLocation">위치</string>
+</resources>

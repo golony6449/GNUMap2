@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="*"
+    tools:context="com.example.jeon.myapplication.MainActivity">
+
+    //건물구조가 다르니 text고정 데이터 삽입 정보 띄우는거만 DB이용
+    <TextView
+        android:text="30동 4층"
+        android:gravity="center"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        //ID , text 데이터로 대처
+        <TextView
+            android:id="@+id/four_1"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#00FF00"
+            android:gravity="center"
+            android:text="401호 강의실"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:id="@+id/PO_1"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="교수연구실"
+            android:gravity="center"
+            android:background="#00FF00"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/four_2"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#00FF00"
+            android:gravity="center"
+            android:text="402호 강의실"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:id="@+id/four_name_O1"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="연구실"
+            android:gravity="center"
+            android:background="#00FF00"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:textSize="20dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            android:text="화장실" />
+        <TextView
+            android:id="@+id/main"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나가기"
+            android:onClick="main"
+            tools:ignore="OnClick"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/four_HL"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:textSize="20dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            android:text="계단" />
+
+    </TableRow>
+
+
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/four_3"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#00FF00"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:text="403호 강의실"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:id="@+id/four_name_O2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="연구실"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="#00FF00"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/four_pr_1"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#00FF00"
+            android:gravity="center"
+            android:text="실습실"
+            android:textSize="20dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:id="@+id/four_name_O3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="조교실"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:background="#00FF00"
+            />
+    </TableRow>
+
+
+
+</TableLayout>

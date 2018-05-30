@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:stretchColumns="*"
+    tools:context="com.example.jeon.myapplication.MainActivity">
+
+    //건물구조가 다르니 text고정 데이터 삽입 정보 띄우는거만 DB이용
+    <TextView
+        android:text="30동 2층"
+        android:gravity="center"
+        />
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        //ID , text 데이터로 대처
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            />
+        <TextView
+            android:id="@+id/two_printer"
+            android:textSize="20dp"
+            android:layout_width="40dp"
+            android:layout_height="80dp"
+            android:background="#FF0000"
+            android:gravity="center"
+            android:text="프린터"
+            />
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="화장실"
+            android:gravity="center"
+            android:background="#00FF00"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            />
+        <TextView
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/two_rr"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:textSize="20dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            android:text="열람실" />
+        <TextView
+            android:id="@+id/main"
+            android:textSize="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="나가기"
+            android:onClick="main"
+            tools:ignore="OnClick"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#FFFF00"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+        <TextView
+            android:id="@+id/two_HL"
+            android:text="계단"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="#00FF00"
+            />
+
+    </TableRow>
+
+</TableLayout>
