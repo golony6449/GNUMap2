@@ -92,15 +92,15 @@ public class InternalMap extends AppCompatActivity {
 
                     public void onClick(DialogInterface dialog, int index){
                         if(index==0) {
-                            Toast.makeText(getApplicationContext(), items[0], Toast.LENGTH_SHORT).show();
-                            Intent myIntent = new Intent(getApplicationContext(), InternalMap4.class);
-                            startActivity(myIntent);
-
-                        }
-                        else if(index==1){
                             Toast.makeText(getApplicationContext(), items[1], Toast.LENGTH_SHORT).show();
                             Intent myIntent2 = new Intent(getApplicationContext(), InternalMap2.class);
                             startActivity(myIntent2);
+                        }
+                        else if(index==1){
+
+                            Toast.makeText(getApplicationContext(), "1층입니다.", Toast.LENGTH_SHORT).show();
+//                            Intent myIntent = new Intent(getApplicationContext(), InternalMap4.class);
+//                            startActivity(myIntent);
                         }
                         else
                         Toast.makeText(getApplicationContext(), "ㅎㅎㅎ", Toast.LENGTH_SHORT).show();

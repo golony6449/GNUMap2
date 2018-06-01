@@ -5,7 +5,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.FragmentActivity;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
@@ -32,6 +34,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     View marker_root_view;
     TextView tv_marker;
     private GoogleMap mMap;
+    DBHelper dbHelper;
+    ArrayList<Building> buildList;
 
 
 
@@ -39,6 +43,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
+
+        dbHelper = new DBHelper(getApplicationContext(), Environment.getExternalStorageDirectory().getPath() + "/gnumap/main.db"
+                , null, 1);
+        buildList = dbHelper.getResult();
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -70,11 +78,15 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private void getSampleMarkerItems() {
         ArrayList<MarkerItem> sampleList = new ArrayList();
 
-
-        /*대학본부*/sampleList.add(new MarkerItem(35.153824, 128.101669, 1));
-        /*도서관*/sampleList.add(new MarkerItem(35.153267, 128.099472, 2));
-        /*컴퓨터과학관*/sampleList.add(new MarkerItem(35.154488, 128.098495, 30));
-        /*대운동장*/sampleList.add(new MarkerItem(35.154736, 128.104446, 43));
+//
+//        /*대학본부*/sampleList.add(new MarkerItem(35.153824, 128.101669, "본부"));
+//        /*도서관*/sampleList.add(new MarkerItem(35.153267, 128.099472, "도서관"));
+//        /*컴퓨터과학관*/sampleList.add(new MarkerItem(35.154488, 128.098495, "컴퓨터과학관"));
+//        /*대운동장*/sampleList.add(new MarkerItem(35.154736, 128.104446, "대운동장"));
+        for (int i =0; i< buildList.size(); i++){
+            Building temp = buildList.get(i);
+            sampleList.add(new MarkerItem(temp.X, temp.Y, temp.getBuildName()));
+        }
 
 
         for (MarkerItem markerItem : sampleList) {
@@ -89,7 +101,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
 
         LatLng position = new LatLng(markerItem.getLat(), markerItem.getLon());
-        int price = markerItem.getPrice();
+        String price = markerItem.getPrice();
 
 //        String formatted = NumberFormat.getCurrencyInstance().format((price));
 //        tv_marker.setText(formatted);
@@ -105,7 +117,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
 
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.title(Integer.toString(price));
+//        markerOptions.title(Integer.toString(price));
+        markerOptions.title(price);
         markerOptions.position(position);
         markerOptions.icon(BitmapDescriptorFactory.fromBitmap(createDrawableFromView(this, marker_root_view)));
 
@@ -138,8 +151,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     private Marker addMarker(Marker marker, boolean isSelectedMarker) {
         double lat = marker.getPosition().latitude;
         double lon = marker.getPosition().longitude;
-        int price = Integer.parseInt(marker.getTitle());
-        MarkerItem temp = new MarkerItem(lat, lon, price);
+//        int price = Integer.parseInt(marker.getTitle());
+        String name = "";
+        MarkerItem temp = new MarkerItem(lat, lon, name);
         return addMarker(temp, isSelectedMarker);
 
     }
@@ -149,10 +163,10 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public boolean onMarkerClick(Marker marker) {
 
-        CameraUpdate center = CameraUpdateFactory.newLatLng(marker.getPosition());
-        mMap.animateCamera(center);
-
-        changeSelectedMarker(marker);
+//        CameraUpdate center = CameraUpdateFactory.newLatLng(marker.getPosition());
+//        mMap.animateCamera(center);
+//
+//        changeSelectedMarker(marker);
 
         return true;
     }

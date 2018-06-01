@@ -174,7 +174,7 @@ public class InternalMap3 extends AppCompatActivity {
                             startActivity(myIntent2);
                         }
                         else
-                        Toast.makeText(getApplicationContext(), "ㅎㅎㅎ", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "예외처리", Toast.LENGTH_SHORT).show();
 
 
                     }

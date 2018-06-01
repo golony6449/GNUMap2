@@ -163,7 +163,7 @@ public class InternalMap4 extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int index){
 
                             Toast.makeText(getApplicationContext(), items[0], Toast.LENGTH_SHORT).show();
-                            Intent myIntent = new Intent(getApplicationContext(), InternalMap.class);
+                            Intent myIntent = new Intent(getApplicationContext(), InternalMap3.class);
                             startActivity(myIntent);
 
 

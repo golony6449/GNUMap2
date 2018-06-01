@@ -8,12 +8,12 @@ public class MarkerItem {
 
     double lat;
     double lon;
-    int price;
+    String name;
 
-    public MarkerItem(double lat, double lon, int price) {
+    public MarkerItem(double lat, double lon, String name) {
         this.lat = lat;
         this.lon = lon;
-        this.price = price;
+        this.name = name;
     }
 
     public double getLat() {
@@ -32,12 +32,12 @@ public class MarkerItem {
         this.lon = lon;
     }
 
-    public int getPrice() {
-        return price;
+    public String getPrice() {
+        return name;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice(String name) {
+        this.name = name;
     }
 
 

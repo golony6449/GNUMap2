@@ -15,19 +15,20 @@
 
         <EditText
             android:id="@+id/input"
-            android:hint="건물명을 입력하세요"
-            android:textSize="21dp"
-            android:inputType="textCapWords"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:hint="건물명을 입력하세요"
+            android:inputType="textCapWords"
+            android:singleLine="true"
+            android:textSize="21dp" />
 
     </LinearLayout>
+
     <ListView
-        android:id="@+id/listView"
+        android:id="@+id/deptList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:divider="#999999"
-        android:dividerHeight="1dp">
-    </ListView>
+        android:dividerHeight="1dp"></ListView>
 
 </LinearLayout>

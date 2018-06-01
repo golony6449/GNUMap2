@@ -32,7 +32,7 @@ public class Search extends AppCompatActivity {
 
 
         editSearch = (EditText) findViewById(R.id.input);
-        listView = (ListView) findViewById(R.id.listView);
+        listView = (ListView) findViewById(R.id.deptList);
 
         // 리스트를 생성한다.
         list = new ArrayList<String>();
@@ -50,17 +50,19 @@ public class Search extends AppCompatActivity {
         // 리스트뷰에 아답터를 연결한다.
         try {
             listView.setAdapter(adapter);
+
+            // TODO: Click Event 처리
             listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    Log.e("id", Long.toString(id));
                     Intent myIntent = new Intent(Search.this, SearchData.class); //전환 클래스명만 바꾸면됨
-                    myIntent.putExtra("list_name",list.get(position).toString());
+                    myIntent.putExtra("buildingObj",list.get(position));
                     startActivity(myIntent);
-                Log.v(TAG,"On Click gnsdlfwjs");
                 }
             });
         } catch ( Exception e ) {
-            Log.v(TAG,"Exception : "+e);
+            Log.v(TAG,"Exception : " + e);
         }
 
 
@@ -237,6 +239,14 @@ public class Search extends AppCompatActivity {
         list.add("동물병원");
         list.add("실험동물실습관");
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        Log.e("Event", "Back Btn Pressed");
+
+
+        super.onBackPressed();
     }
 }
 
