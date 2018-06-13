@@ -165,57 +165,6 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
         startActivity(intent);
     }
 
-
-
-
-
-//    void show() {
-//        final List<String> ListItems = new ArrayList<>();
-//        ListItems.add("100m");
-//        ListItems.add("200m");
-//        ListItems.add("300m");
-//        ListItems.add("400m");
-//        ListItems.add("500m");
-//
-//        final CharSequence[] items =  ListItems.toArray(new String[ ListItems.size()]);
-//
-//        final List SelectedItems  = new ArrayList();
-//        int defaultItem = 0;
-//        SelectedItems.add(defaultItem);
-//
-//        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-//        builder.setTitle("범위 목록");
-//        builder.setSingleChoiceItems(items, defaultItem,
-//                new DialogInterface.OnClickListener() {
-//                    @Override
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        SelectedItems.clear();
-//                        SelectedItems.add(which);
-//                    }
-//                });
-//        builder.setPositiveButton("Ok",
-//                new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//                        String msg="";
-//
-//                        if (!SelectedItems.isEmpty()) {
-//                            int index = (int) SelectedItems.get(0);
-//                            msg = ListItems.get(index);
-//                        }
-//                        Toast.makeText(getApplicationContext(),
-//                                " "+ msg + "\n 설정" , Toast.LENGTH_SHORT)
-//                                .show();
-//                    }
-//                });
-//        builder.setNegativeButton("Cancel",
-//                new DialogInterface.OnClickListener() {
-//                    public void onClick(DialogInterface dialog, int which) {
-//
-//                    }
-//                });
-//        builder.show();
-//    }
-
 //성흠 파트 추가
 
     // TODO: 터치 이벤트 관련 작업

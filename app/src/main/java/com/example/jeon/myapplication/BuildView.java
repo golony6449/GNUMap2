@@ -44,8 +44,6 @@ public class BuildView extends View {
         pntText.setTextSize(30);
         pntText.setColor(Color.WHITE);
 
-//        RectF r = new RectF(getWidth()*0.5f, getHeight()*0.1f, getWidth()*0.9f, getHeight()*0.35f); // 시작 X,Y 좌표, 끝 X,Y 좌표
-
         if (buildingList.isEmpty()){
             super.onDraw(canvas);
             return;

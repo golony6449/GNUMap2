@@ -16,12 +16,6 @@ public class Building {
     private double distance;
     private String college;
 
-//    Building(int buildNum, String buildName, double X, double Y, String imgPath, int wifi){
-//        this.buildName = buildName; this.buildNum = buildNum; this.X = X; this.Y = Y; this.imgPath = imgPath; this.wifi = wifi;
-//        this.xDiff = 0;
-//        this.yDiff = 0;
-//    }
-
     Building(int buildNum, String buildName, double X, double Y, String imgPath, int wifi, String College){
         this.buildName = buildName; this.buildNum = buildNum; this.X = X; this.Y = Y; this.imgPath = imgPath; this.wifi = wifi;
         this.college = College;
@@ -48,7 +42,6 @@ public class Building {
     }
 
     public double returnArcTan(){
-//        double tan = yDiff / xDiff;
         double tan = xDiff / yDiff;
         double radAngle = Math.atan(tan);
 

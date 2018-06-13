@@ -117,67 +117,6 @@ public class Search extends AppCompatActivity {
         adapter.notifyDataSetChanged();
     }
 
-
-
-/*    //*******************************
-    //SD카드 검색
-    //*******************************
-    public static void save(String result) {
-        String sdPath; //SD 카드 경로
-        String externalState = Environment.getExternalStorageState();
-        if (externalState.equals(Environment.MEDIA_MOUNTED)) {
-            //외부장치가 마운트 되어서 읽어올 준비가 되었을떄
-            sdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        }
-        else {
-            //마운트 되지 않았을떄
-            sdPath = Environment.MEDIA_UNKNOWN;
-        }
-        File file = new File(sdPath + "/gnumap/main.db");
-        if (!file.isDirectory())
-            file.mkdir(); //디렉토리 만들기
-        File file1 = new File(sdPath + "/gnumap/main.db");
-        try {
-            FileOutputStream fos = new FileOutputStream(file1);
-            fos.write(result.getBytes());
-            fos.close();
-
-        } catch (Exception e) {
-            Log.i("파일 저장 실패:", e.getMessage());
-        }
-    }
-
-    //데이터 로드 메소드
-    public static String load() {
-        String sdPath;  //SD 카드의 경로
-        String externalState = Environment.getExternalStorageState();
-        if (externalState.equals(Environment.MEDIA_MOUNTED)) {
-            //외부 저장 장치가 마운트 되어서 읽어올 준비가 되었을 때
-            sdPath = Environment.getExternalStorageDirectory().getAbsolutePath();
-        } else {
-            //마운트 되지 않았을 때
-            sdPath = Environment.MEDIA_UNMOUNTED;
-        }
-        String result = "";
-        try {
-            String dir = sdPath + "/myDir/text.txt";
-            //파일에서 읽어오기 위한 스트림 객체
-            File file = new File(dir);
-            FileInputStream fis = new FileInputStream(file);
-            byte[] buffer = new byte[fis.available()];
-            fis.read(buffer);
-            fis.close();
-            result = new String(buffer);
-        } catch (Exception e) {
-            Log.i("불러오기 실패", e.getMessage());
-        }
-        return result;ㅇ
-    }*/
-
-
-
-
-
     // 검색에 사용될 데이터를 리스트에 추가한다.
     private void setArraylist(){ //settingList
         list.add("대학본부");
@@ -243,34 +182,9 @@ public class Search extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Log.e("Event", "Back Btn Pressed");
+//        Log.e("Event", "Back Btn Pressed");
 
 
         super.onBackPressed();
     }
 }
-
-
-
-
-/*
-    public void (View v) {
-        Intent myIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.gnu.ac.kr/main/"));
-        startActivity(myIntent);
-
-    }
-    public void BuildingLocation(View v) {
-        Intent myIntent = new Intent(getApplicationContext(),BuildingLocation.class);
-        startActivity(myIntent);
-
-    }
-    public void InternalMap(View v) {
-        Intent myIntent = new Intent(getApplicationContext(),InternalMap.class);
-        startActivity(myIntent);
-
-    }
-
-}
-
-
-*/
