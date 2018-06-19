@@ -139,6 +139,7 @@ public class BuildView extends View {
             double xDiff = x - obj.X;
             double yDiff = y - obj.Y;
             obj.setXYDiff(xDiff, yDiff);
+
             buildList.set(i, obj);
 
             calcedAngle = Math.atan(yDiff / xDiff);

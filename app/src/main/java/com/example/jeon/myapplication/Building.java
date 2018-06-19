@@ -3,7 +3,9 @@ package com.example.jeon.myapplication;
 import android.graphics.Color;
 import android.location.Location;
 
-public class Building {
+public class
+
+Building {
     private String buildName;
     private int buildNum;
     public double X;
